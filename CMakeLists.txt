@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project(Shape)
+set(CMAKE_CXX_FLAGS "-pthread -std=c++11 ${CMAKE_CXX_FLAGS} -Wall -Og -g")
+add_executable(Shape main.cpp)
+find_package(OpenCV REQUIRED)
+target_link_libraries(Shape ${OpenCV_LIBS})
